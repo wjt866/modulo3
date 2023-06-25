@@ -2,6 +2,7 @@ import modThree from "./index";
 
 describe("modulo 3", () => {
   it("should return 1 for input 1101", () => {
+    
     expect(modThree('1101')).toBe(1)
   });
   it("should return 2 for input 1110", () => {
@@ -15,7 +16,3 @@ describe("modulo 3", () => {
   });
 });
 
-
-// add edge cases
-// long numbers
-// different input eg string - would be better to just input a number what whaever
