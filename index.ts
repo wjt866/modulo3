@@ -1,10 +1,9 @@
-
 function finiteAutomation<FsmState, FsmInput>(
   states: FsmState[],
   inputsAlphabet: FsmInput[],
   initialState: FsmState,
   finalStates: FsmState[],
-  transitionFunction: (state: FsmState, input: FsmInput) => FsmState
+  transitionFunction: (state: FsmState, input: FsmInput) => FsmState,
 ) {
   // validate initialState against states
   if (!states.includes(initialState)) {
@@ -13,9 +12,9 @@ function finiteAutomation<FsmState, FsmInput>(
 
   return function (inputs: FsmInput[]) {
     // validate inputs against input alphabet
-    inputs.forEach(input => {
-      if(!inputsAlphabet.includes(input)) {
-        throw new Error('Invalid input, input not included in input alphabet')
+    inputs.forEach((input) => {
+      if (!inputsAlphabet.includes(input)) {
+        throw new Error('Invalid input, input not included in input alphabet');
       }
     });
 
@@ -27,7 +26,9 @@ function finiteAutomation<FsmState, FsmInput>(
     }
 
     if (!finalStates.includes(state)) {
-      throw new Error('State provided by transition function is not specified in finalStates');
+      throw new Error(
+        'State provided by transition function is not specified in finalStates',
+      );
     }
     return state;
   };
