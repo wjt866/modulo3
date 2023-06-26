@@ -2,6 +2,10 @@ import finiteAutomation from "../index";
 
 /**
  *  Example Implementation - MOD3 
+ *  It's equivalent to the binary number modulo 3
+ *  For example:
+ *  1101 % 3 = 1
+ *  Binary 13 modulus 3 is 1
  * 
  * This example provides the core inputs for the state machine
  * - It includes a transition function
@@ -43,8 +47,8 @@ function transitionFunction(currentState: State, input: Input): State {
 
 export const stateMachine = finiteAutomation<State, Input>(
   ["S0", "S1", "S2"],
-  ["0", "1"], // alphabet not INPUTs
+  ["0", "1"],
   "S0",
-  ["S0", "S1", "S2"], // not really sure how this part should be used?
+  ["S0", "S1", "S2"],
   transitionFunction
 );

@@ -2,9 +2,13 @@ import { stateMachine, Input } from './stateMachine';
 
 /**
  *  Example Implementation - MOD3 
+ *  It's equivalent to the binary number modulo 3
+ *  For example:
+ *  1101 % 3 = 1
+ *  Binary 13 modulus 3 is 1
  * 
  * This example provides additional formatting and the checking of the types
- * - It accepts a string eg '1110' and returns a number
+ * - It accepts a string representing a binary number eg '1110' and returns a number
  * - It uses the same state machine set up as the 'simple' example
  * 
 */
